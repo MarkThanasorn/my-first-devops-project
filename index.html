@@ -1,22 +1,32 @@
 <html>
-  <h1 class="rainbow-text">ยินดีต้อนรับสู่โลกของ DevOps</h1>
+<h1 class="rainbow-animated">ยินดีต้อนรับสู่โลกของ DevOps!</h1>
 
 <style>
-.rainbow-text {
-  /* กำหนดไล่เฉดสีรุ้ง */
-  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+.rainbow-animated {
+  font-size: 60px;
+  font-weight: bold;
   
-  /* บังคับให้พื้นหลังแสดงเฉพาะบนตัวอักษร */
+  /* สร้างพื้นหลังสีรุ้งที่กว้างกว่าปกติ (200%) เพื่อให้มีพื้นที่ในการเลื่อน */
+  background: linear-gradient(to right, red, orange, yellow, green, blue, purple, red);
+  background-size: 200% auto;
+  
+  /* บังคับสีพื้นหลังให้แสดงแค่ในตัวอักษร */
   -webkit-background-clip: text;
   background-clip: text;
-  
-  /* ทำให้สีตัวอักษรเดิมโปร่งใสเพื่อให้เห็นพื้นหลังสีรุ้ง */
   color: transparent;
-  
-  /* ปรับขนาดตัวอักษรให้เห็นชัดๆ */
-  font-size: 50px;
-  font-weight: bold;
-  display: inline-block;
+
+  /* เรียกใช้ Animation ชื่อ rainbow-move */
+  animation: rainbow-move 3s linear infinite;
+}
+
+/* กำหนดการเคลื่อนที่ของพื้นหลัง */
+@keyframes rainbow-move {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
 }
 </style>
 <p>Thanasorn Saiying</p>
